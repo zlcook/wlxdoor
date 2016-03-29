@@ -9,16 +9,16 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import com.cnu.wlx.bean.Admin;
 
 /**
-* @author ÖÜÁÁ 
-* @version ´´½¨Ê±¼ä£º2016Äê3ÔÂ28ÈÕ ÏÂÎç2:36:16
-* ÀàËµÃ÷
+* @author å‘¨äº® 
+* @version åˆ›å»ºæ—¶é—´ï¼š2016å¹´3æœˆ28æ—¥ ä¸‹åˆ2:36:16
+* ç±»è¯´æ˜
 */
 public class DaoTest {
 	
 	private static HibernateTemplate ht;
 	@Before
 	public void init(){
-		//ÊµÀı»¯spring ioc¿ò¼Ü
+		//å®ä¾‹åŒ–spring iocæ¡†æ¶
 		ApplicationContext context =new ClassPathXmlApplicationContext("wlx-service.xml");
 		
 		ht =(HibernateTemplate) context.getBean("hibernateTemplate");

@@ -13,28 +13,28 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
-* @author ÖÜÁÁ 
-* @version ´´½¨Ê±¼ä£º2016Äê3ÔÂ28ÈÕ ÏÂÎç1:49:12
-* ÀàËµÃ÷
+* @author å‘¨äº® 
+* @version åˆ›å»ºæ—¶é—´ï¼š2016å¹´3æœˆ28æ—¥ ä¸‹åˆ1:49:12
+* ç±»è¯´æ˜
 */
 @Entity
 @Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 @Table(name="t_admin")
 public class Admin {
 	/**
-	 * ±êÊ¶id
+	 * æ ‡è¯†id
 	 */
 	private String id;
 	/**
-	 * ÕËºÅ
+	 * è´¦å·
 	 */
 	private String account;
 	/**
-	 * ÃÜÂë
+	 * å¯†ç 
 	 */
 	private String password;
 	/**
-	 * ´´½¨Ê±¼ä
+	 * åˆ›å»ºæ—¶é—´
 	 */
 	private Date createTime=new Date();
 	
