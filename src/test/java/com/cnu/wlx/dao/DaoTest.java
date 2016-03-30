@@ -27,7 +27,7 @@ public class DaoTest {
 	@Test
 	public void addAdmin(){
 		Admin ad = new Admin();
-		ad.setAccount("6");
+		ad.setAccount("7");
 		ad.setPassword("123");
 		ad.setId("5");
 		ht.save(ad);
