@@ -49,5 +49,8 @@ public class DaoTest {
 		ht.get(Admin.class, "4");
 		ht.get(Admin.class, "5");
 	}
-	
+	@Test
+	public void update(){
+		System.out.println("更新方法");
+	}
 }
