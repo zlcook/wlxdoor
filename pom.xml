@@ -20,7 +20,7 @@
     <c3p0.version>0.9.1.2</c3p0.version><!--  数据源依赖版本 -->
     <javassist.version>3.9.0.GA</javassist.version><!-- 提供@Resource,@Entity等注解接口，具体实现由Hibernate实现 -->
      <log4j.version>2.4.1</log4j.version> <!--  日志类 -->
-     <slf4j.version>1.7.12</slf4j.version><!-- slf4j接口 -->
+    <!--  <slf4j.version>1.7.12</slf4j.version> --><!-- slf4j接口 -->
      <beanutils.version>1.9.2</beanutils.version>  <!-- 将值映射到实体类中 -->
      
     <aspectjweaver.version>1.6.9</aspectjweaver.version> <!-- 开发切面编程所需要的包 -->
@@ -67,11 +67,11 @@
 			<version>${slf4j.version}</version>
 		</dependency> -->
 		<!-- 对log4j的兼容 -->
-	  <dependency>
+	 <!--  <dependency>
 	    <groupId>org.apache.logging.log4j</groupId>
 	    <artifactId>log4j-jcl</artifactId>
 	    <version>${log4j.version}</version>
-	  </dependency>
+	  </dependency> -->
 	   <!-- 上传文件需要的两个包 -->
 	   <dependency>
 			<groupId>commons-fileupload</groupId>
