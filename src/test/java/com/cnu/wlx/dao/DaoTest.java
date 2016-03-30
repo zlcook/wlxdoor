@@ -32,7 +32,10 @@ public class DaoTest {
 		ad.setId("5");
 		ht.save(ad);
 	}
-
+	@Test
+	public void delete(){
+		System.out.println("删除");
+	}
 	@Test
 	public void findAdmin(){
 		ht.get(Admin.class, "1");
@@ -46,4 +49,5 @@ public class DaoTest {
 		ht.get(Admin.class, "4");
 		ht.get(Admin.class, "5");
 	}
+	
 }
