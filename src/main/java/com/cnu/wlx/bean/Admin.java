@@ -22,37 +22,38 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Table(name="t_admin")
 public class Admin {
 	/**
-	 * 标识id
-	 */
-	private String id;
-	/**
-	 * 账号
+	 * 账号,20字符之内
 	 */
 	private String account;
 	/**
-	 * 密码
+	 * 密码，md5加密32位
 	 */
 	private String password;
+	/**
+	 *登录次数
+	 */
+	private Integer loginCount=0;
+	/**
+	 * 发稿篇数
+	 */
+	private Integer publishCount=0;
 	/**
 	 * 创建时间
 	 */
 	private Date createTime=new Date();
-	
+	/**
+	 * 启用状态，true:启用,默认启用
+	 */
+	private Boolean visible=true;
 	@Id 
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	@Column(nullable=false)
+	@Column(nullable=false,length=20)
 	public String getAccount() {
 		return account;
 	}
 	public void setAccount(String account) {
 		this.account = account;
 	}
-	@Column(nullable=false)
+	@Column(nullable=false,length=32)
 	public String getPassword() {
 		return password;
 	}
@@ -66,6 +67,23 @@ public class Admin {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	
+	public Integer getLoginCount() {
+		return loginCount;
+	}
+	public void setLoginCount(Integer loginCount) {
+		this.loginCount = loginCount;
+	}
+	public Integer getPublishCount() {
+		return publishCount;
+	}
+	public void setPublishCount(Integer publishCount) {
+		this.publishCount = publishCount;
+	}
+	public Boolean getVisible() {
+		return visible;
+	}
+	public void setVisible(Boolean visible) {
+		this.visible = visible;
+	}
 	
 }
