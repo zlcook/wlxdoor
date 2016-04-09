@@ -16,7 +16,7 @@ import com.cnu.wlx.bean.Admin;
 public class DaoTest {
 	
 	private static HibernateTemplate ht;
-	@Before
+	@Before()
 	public void init(){
 		//实例化spring ioc框架
 		ApplicationContext context =new ClassPathXmlApplicationContext("wlx-service.xml");
@@ -26,16 +26,14 @@ public class DaoTest {
 	
 	@Test
 	public void addAdmin(){
-		Admin ad = new Admin();
-		ad.setAccount("admin");
-		ad.setPassword("123");
+		Admin ad = new Admin("admin21", "123");
 		ht.save(ad);
 	}
-	@Test
+	//@Test
 	public void delete(){
 		System.out.println("删除");
 	}
-	@Test
+	//@Test
 	public void findAdmin(){
 		ht.get(Admin.class, "1");
 		ht.get(Admin.class, "2");
@@ -48,7 +46,7 @@ public class DaoTest {
 		ht.get(Admin.class, "4");
 		ht.get(Admin.class, "5");
 	}
-	@Test
+	//@Test
 	public void update(){
 		System.out.println("更新方法");
 	}
