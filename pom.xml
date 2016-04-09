@@ -56,22 +56,7 @@
 		    <artifactId>log4j-slf4j-impl</artifactId>
 		    <version>${log4j.version}</version>
 		</dependency>
-     <!--   <dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-	   </dependency>  
-	   <dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency> -->
-		<!-- 对log4j的兼容 -->
-	 <!--  <dependency>
-	    <groupId>org.apache.logging.log4j</groupId>
-	    <artifactId>log4j-jcl</artifactId>
-	    <version>${log4j.version}</version>
-	  </dependency> -->
+   
 	   <!-- 上传文件需要的两个包 -->
 	   <dependency>
 			<groupId>commons-fileupload</groupId>
@@ -82,27 +67,27 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.2</version>
-		</dependency>
+		</dependency> 
     <!-- spring的依赖 -->
     
     	 <!-- 支持aop注解 -->
-  		<dependency>
+  		<!--  <dependency>
   			<groupId>org.springframework</groupId>
   			<artifactId>spring-aop</artifactId>
   			<version>${spring.version}</version>
-  		</dependency>
-  		
+  		</dependency> 
+  		 -->
 	  	<dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-context</artifactId>
 	        <version>${spring.version}</version>
 	     </dependency>
 	  		
-	  	<dependency>
+	  <!-- 	<dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-context-support</artifactId>
 	        <version>${spring.version}</version>
-	     </dependency>
+	     </dependency> -->
 	    <dependency>
 	           <groupId>org.springframework</groupId>
 	           <artifactId>spring-beans</artifactId>
@@ -116,27 +101,26 @@
 	      
 	     <!-- 添加对SpringMVC的依赖 -->
 	      <dependency>
-           <groupId>org.springframework</groupId>
-           <artifactId>spring-webmvc</artifactId>
-           <version>${spring.version}</version>
-      	 </dependency>
-	        <dependency>
+           		<groupId>org.springframework</groupId>
+           		<artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+	      </dependency> 
+	       <dependency>
 	           <groupId>org.springframework</groupId>
-	           <artifactId>spring-web</artifactId>
+	           <artifactId>spring-webmvc</artifactId>
 	           <version>${spring.version}</version>
-	       </dependency>
-	       
+	      </dependency> 
        <!--数据源使用c3p0而不是commons-dbcp的-->
-       <dependency>
+        <dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>${c3p0.version}</version>
-		</dependency>
-		 <dependency>
+		</dependency> 
+		 <!-- <dependency>
            <groupId>org.aspectj</groupId>
            <artifactId>aspectjweaver</artifactId>
            <version>${aspectjweaver.version}</version>
-       </dependency>
+       </dependency> -->
        
 		 <!-- Spring实现orm，提供了对hibernate的支持,HibernateTemplate就依赖该包 -->
         <dependency>
@@ -168,6 +152,12 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <dependency>
+            	<groupId>org.slf4j</groupId>
+            	<artifactId>slf4j-api</artifactId>
+            	<version>1.7.12</version>
+            </dependency>
+            
             <dependency>  <!-- 二进制字节码解析 -->
                 <groupId>javassist</groupId>
                 <artifactId>javassist</artifactId>
@@ -187,23 +177,29 @@
            <version>${mysqldriver.version}</version>
        </dependency> 
        <!-- aop涉及到的包 -->
-        <dependency>
+        <!-- <dependency>
            <groupId>org.aspectj</groupId>
            <artifactId>aspectjweaver</artifactId>
            <version>${aspectjweaver.version}</version>
-       </dependency> 
+       </dependency>  -->
        <!-- 动态代理依赖包 -->
-       <dependency>
+      <!--  <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
             <version>${cglib.version}</version>
+        </dependency> -->
+        
+        <dependency>
+        	<groupId>commons-dbcp</groupId>
+        	<artifactId>commons-dbcp</artifactId>
+        	<version>1.2.2</version>
         </dependency>
 	       <!-- 使用JSR-250生命周期注解@PostConstruct和@PreDestroy注解bean的初始化和析构回调方法 -->
-	       <dependency>
+	       <!-- <dependency>
 	       	<groupId>javax.annotation</groupId>
 	       	<artifactId>jsr250-api</artifactId>
 	       	<version>${jsr250.version}</version>
-	       </dependency>
+	       </dependency> -->
 	       
 	         <!-- 依赖的Servlet+jsp+jstl标签 -->
 	    <dependency>
@@ -218,17 +214,17 @@
 	           <version>${jsp-api.version}</version>
 	           <scope>provided</scope>
 	       </dependency>
-	       <dependency>
+	      <!--  <dependency>
 	              <groupId>taglibs</groupId>
 	              <artifactId>standard</artifactId>
 	              <version>${standard.version}</version>
 	              <scope>runtime</scope>
-	       </dependency>
+	       </dependency>-->
 	    <dependency>
 	        <groupId>javax.servlet</groupId>
 	        <artifactId>jstl</artifactId>
 	        <version>${jstl.version}</version>
-	    </dependency>
+	    </dependency> 
   </dependencies>
   <build>
   	<plugins>

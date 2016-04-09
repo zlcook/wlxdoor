@@ -9,12 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <base href="<%=basePath%>">   
-<title>添加</title>        
+<title>添加成功</title>        
 </head>
 <body>
-${formbean.result.error}
-${formbean.result.account}
-${formbean.result.password}
-hello
+成功
 </body>
 </html>

@@ -19,7 +19,7 @@ import com.cnu.wlx.bean.ColumnType;
 public class CascadeTest {
 
 	private static HibernateTemplate ht;
-	@Before
+	//@Before
 	public void init(){
 		//实例化spring ioc框架
 		ApplicationContext context =new ClassPathXmlApplicationContext("wlx-service.xml");
@@ -27,7 +27,7 @@ public class CascadeTest {
 		ht =(HibernateTemplate) context.getBean("hibernateTemplate");
 	}
 	
-	@Test
+	//@Test
 	public void testCascade(){
 		ColumnType ct = new ColumnType("学工新闻t", "x4");
 		ColumnType ct_1 = new ColumnType("学工子新闻1", "x101");
@@ -40,7 +40,7 @@ public class CascadeTest {
 		
 	}
 
-	@Test
+	//@Test
 	public void testUpdate(){
 		
 	}

@@ -45,6 +45,18 @@ public class Admin {
 	 * 启用状态，true:启用,默认启用
 	 */
 	private Boolean visible=true;
+	
+	public Admin(String account, String password) {
+		super();
+		this.account = account;
+		this.password = password;
+	}
+	
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id 
 	@Column(nullable=false,length=20)
 	public String getAccount() {

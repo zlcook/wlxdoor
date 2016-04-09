@@ -15,6 +15,7 @@ import javax.persistence.Entity;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.transaction.annotation.Propagation;
@@ -80,7 +81,13 @@ public abstract class DaoSupport<T>   implements Dao<T>{
 	}
 	
 	public void save(T entity) {
-			ht.persist(entity);
+			try {
+				ht.persist(entity);
+			} catch (DataAccessException e) {
+				e.printStackTrace();
+			}catch(Exception e){
+				throw new RuntimeException("账号一存在!");
+			}
 	}
 	
 	@Transactional(readOnly=true,propagation=Propagation.NOT_SUPPORTED)
